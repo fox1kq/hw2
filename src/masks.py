@@ -7,5 +7,8 @@ def get_mask_number_card(card: str) -> str:
     )
     return card_under_mask
 
-
+def get_mask_account(card: str) -> str:
+    """Функция, принимающая номер карты и возвращающая номер под маской,
+    где видны последние 4 цифры, а перед ними 2 звездочки"""
+    return "**" + card[16:]
 
