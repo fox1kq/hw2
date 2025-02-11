@@ -6,6 +6,3 @@ def get_mask_number_card(card: str) -> str:
         new_card[:4] + " " + new_card[4:8] + " " + new_card[8:12] + " " + new_card[12:]
     )
     return card_under_mask
-
-
-
