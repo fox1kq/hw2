@@ -25,7 +25,7 @@ name = "hw2"
 packages = [{include = "src"}]
 
 [tool.black]
-max-line-length = 119
+line_length = 119
 exclude = """
 (
 .git
