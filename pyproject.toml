@@ -23,7 +23,7 @@ mypy = "^1.15.0"
 
 
 [tool.black]
-max-line-length = 119
+line_length = 119
 exclude = """
 (
 .git
