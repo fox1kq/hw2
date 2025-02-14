@@ -1,5 +1,5 @@
 [project]
-name = "hw-2"
+name = "hw21"
 version = "0.1.0"
 description = ""
 authors = [
@@ -9,7 +9,6 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
 ]
-
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -21,3 +20,6 @@ black = "^25.1.0"
 isort = "^6.0.0"
 mypy = "^1.15.0"
 
+[tool.poetry]
+name = "hw21"
+packages = [{include = "src"}]
