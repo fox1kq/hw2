@@ -21,6 +21,7 @@ isort = "^6.0.0"
 mypy = "^1.15.0"
 
 
+
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.4"
 pytest-cov = "^6.0.0"
@@ -28,6 +29,7 @@ pytest-cov = "^6.0.0"
 [tool.poetry]
 name = "hw2"
 packages = [{include = "src"}]
+
 
 [tool.black]
 line_length = 119
