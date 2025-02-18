@@ -1,15 +1,14 @@
 [project]
-name = "hw-2"
+name = "hw2"
 version = "0.1.0"
 description = ""
 authors = [
     {name = "Padusev.D",email = "fox1kqq@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
 ]
-
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -20,6 +19,16 @@ flake8 = "^7.1.1"
 black = "^25.1.0"
 isort = "^6.0.0"
 mypy = "^1.15.0"
+
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+
+[tool.poetry]
+name = "hw2"
+packages = [{include = "src"}]
 
 
 [tool.black]
@@ -37,3 +46,4 @@ line_length = 119
 disallow_untyped_defs = true
 warn_return_any = true
 exclude = "venv"
+explicit_package_bases = true
