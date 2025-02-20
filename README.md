@@ -20,6 +20,14 @@ from masks import get_mask_number_card, get_mask_account
 
 ## Функции:
 
+### Генераторы
+
+filter_by_currency(transactions, currency) - Функция, которая фильтрует транзакции по заданной валюте.
+
+transaction_descriptions(transactions) - Генератор, который возвращает описание каждой операции по очереди.
+
+card_number_generator(start, end) - Генератор, который выдает номера банковских карт в формате XXXX XXXX XXXX XXXX.
+
 ### Маскирование номеров карт
 
 get_mask_number_card(card) — маскирует номер карты, оставляя видимыми первые 6 и последние 4 цифры.
