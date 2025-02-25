@@ -1,14 +1,26 @@
+from typing import Union
+
+
 def filter_by_state(list_of_operation: list, value_of_state: str) -> list:
-    """Функция, которая принимает список словарей и возвращает
-    те словари, в которых присутствует указанный ключ"""
+    """Функция, которая принимает список словарей и возвращает словари, содержащие указанный ключ."""
     list_for_return = []
     for i in range(len(list_of_operation)):
-        if list_of_operation[i]["state"] == value_of_state:
+        if list_of_operation[i]["state"] == value_of_state.upper():
             list_for_return.append(list_of_operation[i])
     return list_for_return
 
-def sort_by_date(list_of_operation: list, reverse: bool = True) -> list:
+
+def sort_by_date(list_of_operation: list, reverse: bool = True) -> Union[list, str]:
     """Сортирует список словарей по дате"""
-    return sorted(list_of_operation, key=lambda x: x["date"], reverse=reverse)
+    try:
+        return sorted(list_of_operation, key=lambda x: x["date"], reverse=reverse)
+    except KeyError:
+        return "Ошибка: Проверьте данные"
 
 
+list_user = [
+    {"id": 1, "state": "EXECUTED", "date": "2022-01-01T12:00:00"},
+    {"id": 2, "state": "EXECUTED"},  # У этого элемента нет даты
+    {"id": 3, "state": "CANCELED", "date": "2023-03-10T14:15:00"},
+]
+print(sort_by_date(list_user))
