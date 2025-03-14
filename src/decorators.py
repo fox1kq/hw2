@@ -2,6 +2,8 @@ from typing import Any, Optional
 
 
 def log(filename: Optional[str] = None) -> Any:
+    """Декоратор, который логирует начало и конец выполнения функции, а также ее результаты или возникшие ошибки"""
+
     def decorator(func: Any) -> Any:
         def wrapper(*args: Any, **kwargs: Any) -> Any:
             try:
@@ -22,11 +24,3 @@ def log(filename: Optional[str] = None) -> Any:
         return wrapper
 
     return decorator
-
-
-@log()
-def add(a: int, b: int) -> int:
-    return a + b
-
-
-add(1, 3)
