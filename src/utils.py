@@ -11,4 +11,4 @@ def load_financial_transactions(path_to_file):
         if isinstance(data, list):
             return data
         else:
-            return "Ошибка"
+            return []
