@@ -1,15 +1,18 @@
 import logging
 
 # Основная конфигурация logging
-logging.basicConfig(level=logging.DEBUG,
-                    format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    filename = r'D:\PythonProjects\hw2\logs\masks.log',
-                    filemode = 'w',
-                    encoding = 'utf-8')
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    filename=r"D:\PythonProjects\hw2\logs\masks.log",
+    filemode="w",
+    encoding="utf-8",
+)
 
 
-mask_card_logger = logging.getLogger('mask_card')
-mask_account_logger = logging.getLogger('mask_account')
+mask_card_logger = logging.getLogger("mask_card")
+mask_account_logger = logging.getLogger("mask_account")
+
 
 def get_mask_number_card(card: str) -> str:
     """Функция, принимающая номер карты и возвращающая номер под маской,

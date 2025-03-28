@@ -1,18 +1,18 @@
 import json
-import os
 import logging
+import os
 
 # Основная конфигурация logging
-logging.basicConfig(level=logging.DEBUG,
-                    format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    filename = r'D:\PythonProjects\hw2\logs\utils.log',
-                    filemode = 'w',
-                    encoding = 'utf-8')
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    filename=r"D:\PythonProjects\hw2\logs\utils.log",
+    filemode="w",
+    encoding="utf-8",
+)
 
 
 load_financial_transactions_logger = logging.getLogger("load_financial_transactions")
-
-
 
 
 def load_financial_transactions(path_to_file):
@@ -32,5 +32,3 @@ def load_financial_transactions(path_to_file):
         else:
             load_financial_transactions_logger.warning("Файл не содержит списка")
             return []
-
-print(load_financial_transactions("blabla"))
