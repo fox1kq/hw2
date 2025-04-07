@@ -17,10 +17,3 @@ def sort_by_date(list_of_operation: list, reverse: bool = True) -> Union[list, s
     except KeyError:
         return "Ошибка: Проверьте данные"
 
-
-list_user = [
-    {"id": 1, "state": "EXECUTED", "date": "2022-01-01T12:00:00"},
-    {"id": 2, "state": "EXECUTED"},  # У этого элемента нет даты
-    {"id": 3, "state": "CANCELED", "date": "2023-03-10T14:15:00"},
-]
-print(sort_by_date(list_user))
