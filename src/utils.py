@@ -16,6 +16,8 @@ load_financial_transactions_logger = logging.getLogger("load_financial_transacti
 
 
 def load_financial_transactions(path_to_file):
+    """Функция, загрузки финансовых транзакций"""
+
     load_financial_transactions_logger.info("Начало выполнения функции")
 
     if not os.path.exists(path_to_file):
