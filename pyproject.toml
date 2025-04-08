@@ -8,8 +8,43 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "requests (>=2.32.3,<3.0.0)",
-    "python-dotenv (>=1.1.0,<2.0.0)"
+    "requests (==2.32.3)",
+    "python-dotenv (==1.1.0)",
+    "black (==25.1.0)",
+    "certifi (==2025.1.31)",
+    "charset-normalizer (==3.4.1)",
+    "click (==8.1.8)",
+    "colorama (==0.4.6)",
+    "coverage (==7.6.12)",
+    "dotenv (==0.9.9)",
+    "et-xmlfile (==2.0.0)",
+    "flake8 (==7.1.1)",
+    "idna (==3.10)",
+    "iniconfig (==2.0.0)",
+    "isort (==6.0.0)",
+    "mccabe (==0.7.0)",
+    "mypy (==1.15.0)",
+    "mypy-extensions (==1.0.0)",
+    "numpy (==2.2.4)",
+    "openpyxl (==3.1.5)",
+    "packaging (==24.2)",
+    "pandas (==2.2.3)",
+    "pandas-stubs (==2.2.3.250308)",
+    "pathspec (==0.12.1)",
+    "platformdirs (==4.3.6)",
+    "pluggy (==1.5.0)",
+    "pycodestyle (==2.12.1)",
+    "pyflakes (==3.2.0)",
+    "pytest (==8.3.4)",
+    "pytest-cov (==6.0.0)",
+    "python-dateutil (==2.9.0.post0)",
+    "pytz (==2025.2)",
+    "six (==1.17.0)",
+    "types-pytz (==2025.2.0.20250326)",
+    "types-requests (==2.32.0.20250328)",
+    "typing-extensions (==4.12.2)",
+    "tzdata (==2025.2)",
+    "urllib3 (==2.3.0)"
 ]
 
 [build-system]
