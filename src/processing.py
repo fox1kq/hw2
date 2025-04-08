@@ -16,4 +16,3 @@ def sort_by_date(list_of_operation: list, reverse: bool = True) -> Union[list, s
         return sorted(list_of_operation, key=lambda x: x["date"], reverse=reverse)
     except KeyError:
         return "Ошибка: Проверьте данные"
-
