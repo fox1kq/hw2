@@ -1,5 +1,12 @@
 from transaction_filters.loader import load_json, load_csv, load_xlsx
-from transaction_filters.filters import filter_by_description, count_operations_by_category, filter_by_status, sort_transactions, normalize_status
+from transaction_filters.filters import (
+    filter_by_description,
+    count_operations_by_category,
+    filter_by_status,
+    sort_transactions,
+    normalize_status
+)
+from collections import Counter
 
 
 def main():
@@ -51,7 +58,14 @@ def main():
         word = input("Введите слово для поиска: ").strip()
         transactions = filter_by_description(transactions, word)
 
-    print("Распечатываю итоговый список транзакций...")
+    count_answer = input("Посчитать количество операций по категориям? Да/Нет: ").strip().lower()
+    if count_answer == "да":
+        category_counter = count_operations_by_category(transactions)
+        print("Количество операций по категориям:")
+        for category, count in category_counter.items():
+            print(f"{category}: {count}")
+
+    print("\nРаспечатываю итоговый список транзакций...")
     if not transactions:
         print("Не найдено ни одной транзакции, подходящей под ваши условия фильтрации")
     else:
