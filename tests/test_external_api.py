@@ -1,6 +1,6 @@
-from src.external_api import get_exchange_rate
 from unittest.mock import patch
-import requests
+
+from src.external_api import get_exchange_rate
 
 
 @patch("requests.get")
@@ -23,7 +23,7 @@ def test_get_exchange_rate_rub(mock_get):
 
 
 @patch("requests.get")
-def test_get_exchange_rate_rub(mock_get):
+def test_get_exchange_rate_usd(mock_get):
     mock_get.return_value.json.return_value = {"result": 689166.43}
     assert (
         get_exchange_rate(
