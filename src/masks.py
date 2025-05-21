@@ -4,7 +4,7 @@ import logging
 logging.basicConfig(
     level=logging.DEBUG,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    filename=r"D:\PythonProjects\hw2\logs\masks.log",
+    filename=r"C:\Users\Padusev.D\PycharmProjects\hw2\logs\masks.log",
     filemode="w",
     encoding="utf-8",
 )

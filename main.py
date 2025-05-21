@@ -32,6 +32,7 @@ def main():
         print("Неверный выбор. Завершение работы.")
         return
 
+
     available_statuses = {"EXECUTED", "CANCELED", "PENDING"}
 
     while True:
